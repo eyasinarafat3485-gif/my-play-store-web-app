@@ -1,9 +1,9 @@
 import { useParams } from 'react-router';
-import useAppsHook from '../../Hooks/useAppsHook';
 import { FadeLoader } from 'react-spinners';
 import { useContext } from 'react';
 import { InstalledContext } from '../../Context/InstallAppsContext';
 import { toast } from 'react-toastify';
+import useAppsHook from '../../hooks/useAppsHook';
 
 const AppDetails = () => {
     const { id } = useParams()

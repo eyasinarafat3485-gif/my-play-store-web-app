@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Legend, Pie, PieChart, Tooltip } from 'recharts';
 import { InstalledContext } from '../../Context/InstallAppsContext';
-import useAppsHook from '../../Hooks/useAppsHook';
+import useAppsHook from '../../hooks/useAppsHook';
 
 const Dashboard = () => {
     const {installApps}= useContext(InstalledContext);
