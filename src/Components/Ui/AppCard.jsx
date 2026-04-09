@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaDownload, FaStar } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const AppCard = ({app, id}) => {
     return (
-        <div key={id} className="card bg-base-100 shadow-sm">
+        <Link to={`/apps/${app.id}`} key={id} className="card bg-base-100 shadow-sm">
                         <figure>
                             <img className='w-auto h-50 object-contain pt-5'
                                 src={app.image}/>
@@ -16,7 +17,7 @@ const AppCard = ({app, id}) => {
                             <span className='bg-orange-100 text-orange-500 flex items-center gap-2 py-1 px-2 font-semibold rounded-md'><FaStar />{app.ratingAvg}</span>
                             </div>
                         </div>
-                    </div>
+                    </Link>
     );
 };
 

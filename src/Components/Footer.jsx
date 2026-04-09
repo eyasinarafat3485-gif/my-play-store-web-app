@@ -5,7 +5,7 @@ import { LiaLinkedin } from 'react-icons/lia';
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-[#001529] text-white px-6 py-10 md:px-12">
+        <footer className="w-full bg-[#001529] text-white px-15 py-10 md:px-15">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-6">
                     <div className="flex items-center gap-2 mb-6 md:mb-0">

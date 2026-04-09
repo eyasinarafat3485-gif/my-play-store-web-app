@@ -11,8 +11,8 @@ const Banner = () => {
             <p className='text-gray-600 w-[60%] mx-auto'>At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
 
             <div className='flex justify-center gap-5'>
-                <button className='btn hover:bg-white'><img className='w-6 h-6 hover:-bg-gre' src={playStore} alt="" /> Google Play</button>
-                <button className='btn hover:bg-white'> <img className='w-6 h-6 hover:-bg-gre' src={appStore} alt="" />App Store</button>
+                <button className='btn hover:bg-gray-100'><img className='w-6 h-6 hover:-bg-gre' src={playStore} alt="" /> Google Play</button>
+                <button className='btn hover:bg-gray-100'> <img className='w-6 h-6 hover:-bg-gre' src={appStore} alt="" />App Store</button>
             </div>
             <img className='mx-auto' src={bannerImg} alt="" />
 

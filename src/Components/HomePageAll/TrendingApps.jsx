@@ -1,15 +1,14 @@
-// import React, { use } from 'react';
-
 import { FadeLoader } from 'react-spinners';
 import AppCard from '../Ui/AppCard';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-// import { useLoaderData } from 'react-router';
+import UseAppsHook from '../../Hooks/UseAppsHook';
+
 
 // (1) normal data fetch-------
 // const appsPromise = fetch("/data.json").then((res) => res.json())
 
 const TrendingApps = () => {
+    const {apps, loading}= UseAppsHook()
     // const apps = use(appsPromise);
     // console.log(apps)
 
@@ -18,27 +17,8 @@ const TrendingApps = () => {
     // console.log(data)
 
 // (3) useEffect data fetch-------
-    const [apps, setApps]= useState([]);
-    const [loading, setLoading]= useState(true);
-    useEffect(()=>{
-        const fetchData= async()=>{
-            const res= await fetch("/data.json");
-            const data= await res.json();
-            // console.log(data)
-
-            //  setApps(data);
-            // setLoading(false)
-            
-            setTimeout(()=>{
-                setApps(data);
-            setLoading(false)
-            }, 1000)
-            
-        };
-        fetchData()
-    }, [])
-    console.log(apps, "apps");
-    console.log(loading, "loading")
+    // console.log(apps, "apps");
+    // console.log(loading, "loading")
 
 
     return (
@@ -50,7 +30,7 @@ const TrendingApps = () => {
             
             {loading ? 
             <div className='flex justify-center items-center'><FadeLoader color='#ad46ff' /> </div> : 
-            <div className='grid grid-cols-4 w-[90%] mx-auto gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-4 w-[90%] mx-auto gap-8'>
             {
                 apps.slice(0, 8).map((app, id) => {
                     return (
